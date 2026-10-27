@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>StudyFlow | Study Materials</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <!-- NAVBAR -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            Study<span>Flow</span>
+        </div>
+
+
+        <nav>
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="courses.html">
+                Courses
+            </a>
+
+            <a href="materials.html">
+                Study Materials
+            </a>
+
+        </nav>
+
+
+        <button
+            class="start-btn"
+            onclick="location.href='login.html'"
+        >
+            Login
+        </button>
+
+    </header>
+
+
+    <!-- MATERIALS -->
+
+    <main class="page-container">
+
+        <div class="page-heading">
+
+            <p>
+                RESOURCE LIBRARY
+            </p>
+
+            <h1>
+                Study
+                <span>Materials</span>
+            </h1>
+
+            <p>
+                Find notes, documents and learning resources
+                for your courses.
+            </p>
+
+        </div>
+
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="materialSearch"
+                placeholder="Search study materials..."
+            >
+
+        </div>
+
+
+        <!-- MATERIAL LIST -->
+
+        <div
+            class="material-list"
+            id="materialList"
+        >
+
+
+            <div class="material-card">
+
+                <div class="material-icon">
+                    📄
+                </div>
+
+                <div>
+
+                    <h3>
+                        Cloud Computing Notes
+                    </h3>
+
+                    <p>
+                        Module 1 • Introduction to Cloud Computing
+                    </p>
+
+                </div>
+
+                <button class="primary-btn">
+                    View
+                </button>
+
+            </div>
+
+
+            <div class="material-card">
+
+                <div class="material-icon">
+                    📄
+                </div>
+
+                <div>
+
+                    <h3>
+                        Virtualization & Docker
+                    </h3>
+
+                    <p>
+                        Module 2 • Cloud Platform
+                    </p>
+
+                </div>
+
+                <button class="primary-btn">
+                    View
+                </button>
+
+            </div>
+
+
+            <div class="material-card">
+
+                <div class="material-icon">
+                    📄
+                </div>
+
+                <div>
+
+                    <h3>
+                        React Fundamentals
+                    </h3>
+
+                    <p>
+                        Module 2 • Full Stack Development
+                    </p>
+
+                </div>
+
+                <button class="primary-btn">
+                    View
+                </button>
+
+            </div>
+
+
+            <div class="material-card">
+
+                <div class="material-icon">
+                    📄
+                </div>
+
+                <div>
+
+                    <h3>
+                        REST API Development
+                    </h3>
+
+                    <p>
+                        Module 3 • Full Stack Development
+                    </p>
+
+                </div>
+
+                <button class="primary-btn">
+                    View
+                </button>
+
+            </div>
+
+
+            <div class="material-card">
+
+                <div class="material-icon">
+                    📄
+                </div>
+
+                <div>
+
+                    <h3>
+                        MongoDB & Mongoose
+                    </h3>
+
+                    <p>
+                        Module 4 • Full Stack Development
+                    </p>
+
+                </div>
+
+                <button class="primary-btn">
+                    View
+                </button>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="logo">
+            Study<span>Flow</span>
+        </div>
+
+        <p>
+            © 2026 StudyFlow. Academic Learning Platform.
+        </p>
+
+    </footer>
+
+
+    <!-- SEARCH JAVASCRIPT -->
+
+    <script>
+
+        const search = document.getElementById("materialSearch");
+
+        const materials =
+            document.querySelectorAll(".material-card");
+
+
+        search.addEventListener("input", function () {
+
+            const value =
+                search.value.toLowerCase();
+
+
+            materials.forEach(function (material) {
+
+                material.style.display =
+                    material.innerText
+                    .toLowerCase()
+                    .includes(value)
+                    ? "flex"
+                    : "none";
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
